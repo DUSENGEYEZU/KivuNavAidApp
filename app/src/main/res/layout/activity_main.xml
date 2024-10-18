@@ -1,21 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="#F8F4F4">
+    android:layout_height="match_parent">
 
-<!--    <TextView-->
-<!--        android:id="@+id/helloTextView"-->
-<!--        android:layout_width="828dp"-->
-<!--        android:layout_height="357dp"-->
-<!--        android:layout_centerInParent="true"-->
-<!--        android:text="Kivu Navigation Aid App"-->
-<!--        android:textColor="#020202"-->
-<!--        android:textSize="24sp" />-->
+    <!-- Search Bar -->
+    <SearchView
+        android:id="@+id/search_location"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:queryHint="Search location..." />
+
+    <!-- Map Fragment -->
     <fragment
         android:id="@+id/map"
         android:name="com.google.android.gms.maps.SupportMapFragment"
         android:layout_width="match_parent"
-        android:layout_height="match_parent" />
+        android:layout_height="match_parent"
+        android:layout_below="@id/search_location" />
 
 </RelativeLayout>
